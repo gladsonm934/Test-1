@@ -1,1 +1,25 @@
-
+pipeline{
+agent any
+stages{
+stage('checkout code'){
+steps{
+    git 'https://github.com/gladsonm934/Test-1'
+    }
+  }
+stage('Build'){
+steps{
+sh 'echo"building the app"'
+}
+}
+stage('Test'){
+steps{
+sh 'echo "Testing test"'
+}
+}
+stage('Deploy'){
+steps{
+sh 'echo "Deploying"'
+}
+}
+ }
+}
